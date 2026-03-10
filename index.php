@@ -59,6 +59,7 @@
             <div class="card-container">
                 
                 <?php
+                /*
                     // 1. 親となる繰り返しフィールド（menu_list）を取得
                     $menu_items = SCF::get('menu_list');
 
@@ -73,7 +74,9 @@
 
                             // 画像IDからURLを取得
                             $img_src = wp_get_attachment_image_src($img_id, 'medium');
+                
                 ?>
+
                             <div class="card">
                                 <?php if($img_src): ?>
                                     <div class="card-image">
@@ -99,7 +102,10 @@
                     else:
                         echo '<p>現在、メニューを準備中です。</p>';
                     endif; // ifの終了
+                */
                 ?>
+                */
+                
             </div>  
         </section>
 
