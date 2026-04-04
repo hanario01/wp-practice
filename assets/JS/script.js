@@ -9,7 +9,8 @@ function navigate(pageId) {
     pages.forEach(page => page.classList.remove('active'));
 
     // 選択されたページを表示する
-    document.getElementById(pageId).classList.add('active');
+    const target = document.getElementById(pageId);
+    if (target) target.classList.add('active');
 
     // ナビゲーションのハイライトを更新
     const navLinks = document.querySelectorAll('nav a');
@@ -24,20 +25,7 @@ function navigate(pageId) {
 }
 
 // 店舗詳細の表示機能
-const shopData = {
-    'tokyo': {
-        name: '東京本店',
-        address: '東京都新宿区1-1-1',
-        hours: '11:00 - 22:00 (L.O. 21:30)',
-        tel: '03-XXXX-XXXX'
-    },
-    'osaka': {
-        name: '大阪店',
-        address: '大阪府大阪市北区2-2-2',
-        hours: '11:30 - 21:00 (L.O. 20:30)',
-        tel: '06-XXXX-XXXX'
-    }
-};
+// shopData は index.php のインラインスクリプトで PHP から渡される
 
 function showShopDetail(shopId) {
     const data = shopData[shopId];
